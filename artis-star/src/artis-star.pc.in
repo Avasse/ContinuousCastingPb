@@ -1,0 +1,12 @@
+prefix=@ARTIS_PKGCONFIG_PREFIXPATH@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/@ARTIS_PKGCONFIG_LIBDIR@
+includedir=${prefix}/include
+
+Name: vle
+Description: ARTIS multimodelling and Simulation tools
+Requires:
+Version: @ARTIS_VERSION@
+Libs:	-L${libdir} \
+    -lpdevs-@ARTIS_VERSION_SHORT@
+Cflags: -I${includedir}/artis-star-@ARTIS_VERSION_SHORT@ -I@ARTIS_PKGCONFIG_BOOSTINCLUDE_DIRS@
